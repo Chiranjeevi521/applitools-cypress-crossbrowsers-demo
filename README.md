@@ -24,10 +24,6 @@ There is 1 spec file called AppliFashonTest.spec.ts which contains 3 tests
 
 1. npm run final_prod
 
-# Test Reports :
-
-1. npm run html_report
-
 # Test results on Circle CI cloud :
 
 Configured all tests to run on Chrome browser against final_prod version
