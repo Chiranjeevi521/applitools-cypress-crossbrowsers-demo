@@ -47,4 +47,4 @@ workflows:
           browser: chrome
           command: |
             set +e
-            npm run test
+            npm run final_prod

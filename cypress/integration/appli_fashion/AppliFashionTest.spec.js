@@ -1,14 +1,7 @@
 var config = require('../../../applitools.config');
 const appName = 'AppliFashion';
 
-// URL of produciton environemnt
-// const url = 'https://demo.applitools.com/tlcHackathonMasterV1.html';
-
-// URL of dev environment
-//const url = 'https://demo.applitools.com/tlcHackathonDev.html';
-
-// URL of final production environment
-const url = 'https://demo.applitools.com/tlcHackathonMasterV2.html';
+const url = Cypress.env('url');
 
 function eyesCheck(params) {
   Cypress.config('eyesTimeout');

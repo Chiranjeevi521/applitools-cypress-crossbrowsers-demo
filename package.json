@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "delete": "npx del-cli --force mochawesome.json",
-    "test": "npx cypress run --browser chrome --spec 'cypress/integration/appli_fashion/*.spec.js'",
+    "prod": "npx cypress run --browser chrome --spec 'cypress/integration/appli_fashion/*.spec.js' --env url=https://demo.applitools.com/tlcHackathonMasterV1.html",
+    "dev": "npx cypress run --browser chrome --spec 'cypress/integration/appli_fashion/*.spec.js' --env url=https://demo.applitools.com/tlcHackathonDev.html",
+    "final_prod": "npx cypress run --browser chrome --spec 'cypress/integration/appli_fashion/*.spec.js' --env url=https://demo.applitools.com/tlcHackathonMasterV2.html",
     "validate": "circleci config validate .circleci/config.yml",
     "process": "circleci config process .circleci/config.yml",
     "merge_reports": "npm run delete && npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json",
