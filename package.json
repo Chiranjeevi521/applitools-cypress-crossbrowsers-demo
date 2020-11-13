@@ -4,10 +4,12 @@
   "description": "This project is for Applitools Holiday Shopping Hackathon 2020",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "citest_chrome": "npx cypress run --browser chrome --spec 'cypress/integration/appli_fashion/*.spec.js'",
+    "delete": "npx del-cli --force mochawesome.json",
+    "test": "npx cypress run --browser chrome --spec 'cypress/integration/appli_fashion/*.spec.js'",
     "validate": "circleci config validate .circleci/config.yml",
-    "process": "circleci config process .circleci/config.yml"
+    "process": "circleci config process .circleci/config.yml",
+    "merge_reports": "npm run delete && npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json",
+    "html_report": "npm run merge_reports && npx marge mochawesome.json"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,12 @@
   "homepage": "https://github.com/Chiranjeevi521/ApplitoolsHolidayShoppingHackathon2020#readme",
   "devDependencies": {
     "@applitools/eyes-cypress": "latest",
-    "cypress": "latest"
+    "cypress": "latest",
+    "del-cli": "^3.0.1",
+    "mocha": "^5.2.0",
+    "mocha-multi-reporters": "1.1.7",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0"
   }
 }

@@ -47,4 +47,10 @@ workflows:
           browser: chrome
           command: |
             set +e
-            npm run citest_chrome
+            npm run test
+            npm run html_report
+          post-steps:
+            - store_artifacts:
+                path: mochawesome-report
+            - store_test_results:
+                path: mochawesome-report
