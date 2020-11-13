@@ -1,0 +1,27 @@
+{
+  "name": "applitoolsholidayshoppinghackathon2020",
+  "version": "1.0.0",
+  "description": "This project is for Applitools Holiday Shopping Hackathon 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "citest_chrome": "npx cypress run --browser chrome --spec 'cypress/integration/appli_fashion/*.spec.js'",
+    "citest_firefox": "npx cypress run --browser firefox --spec 'cypress/integration/appli_fashion/*.spec.js'",
+    "validate": "circleci config validate .circleci/config.yml",
+    "process": "circleci config process .circleci/config.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chiranjeevi521/ApplitoolsHolidayShoppingHackathon2020.git"
+  },
+  "author": "Chiranjeevi Dasatti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chiranjeevi521/ApplitoolsHolidayShoppingHackathon2020/issues"
+  },
+  "homepage": "https://github.com/Chiranjeevi521/ApplitoolsHolidayShoppingHackathon2020#readme",
+  "devDependencies": {
+    "@applitools/eyes-cypress": "latest",
+    "cypress": "latest"
+  }
+}

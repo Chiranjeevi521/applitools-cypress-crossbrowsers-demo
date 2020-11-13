@@ -1,0 +1,62 @@
+version: 2.1
+orbs:
+  # use latest 1.x.y version of the orb
+  # best practice is to use an exact version
+  cypress: cypress-io/cypress@1.24.0
+  node: circleci/node@1.1
+
+executors:
+  chrome81-ff75:
+    docker:
+      - image: 'cypress/browsers:node12.16.2-chrome81-ff75'
+
+jobs:
+  unit:
+    executor:
+      name: node/default
+      tag: '12'
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+
+workflows:
+  # a workflow to run on dependency updates with Renovate
+  dependencies:
+    jobs:
+      - cypress/run:
+          name: test dependencies
+          filters:
+            branches:
+              only: /renovate.*/
+          no-workspace: true
+          record: true
+          tags: dependencies,renovate
+
+  build:
+    jobs:
+      # run tests inside Docker image with Chrome pre-installed
+      - cypress/run:
+          filters:
+            branches:
+              ignore: /^renovate/
+          name: Chrome 81
+          executor: chrome81-ff75
+          record: true
+          browser: chrome
+          command: |
+            set +e
+            npm run citest_chrome
+      # run tests inside Docker image with Firefox pre-installed
+      - cypress/run:
+          filters:
+            branches:
+              ignore: /^renovate/
+          name: Firefox 75
+          executor: chrome81-ff75
+          record: true
+          browser: firefox
+          command: |
+            set +e
+            npm run citest_firefox

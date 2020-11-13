@@ -1,0 +1,7 @@
+# dependencies
+/node_modules
+
+# Cypress screenshots and videos
+/cypress/videos
+/cypress/screenshots
+/cypress/results/*.json
