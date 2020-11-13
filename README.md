@@ -6,8 +6,8 @@ There is 1 spec file called AppliFashonTest.spec.ts which contains 3 tests
 
 # How to setup :
 
-1. Clone this repo ( git clone https://github.com/Chiranjeevi521/ApplitoolsHackathon2020.git )
-2. cd ApplitoolsHackathon2020
+1. Clone this repo ( git clone https://github.com/Chiranjeevi521/ApplitoolsHolidayShoppingHackathon2020.git )
+2. cd ApplitoolsHolidayShoppingHackathon2020
 3. npm install
 
 # How to run tests :

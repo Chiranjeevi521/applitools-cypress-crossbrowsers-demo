@@ -23,12 +23,6 @@
   "homepage": "https://github.com/Chiranjeevi521/ApplitoolsHolidayShoppingHackathon2020#readme",
   "devDependencies": {
     "@applitools/eyes-cypress": "latest",
-    "cypress": "latest",
-    "del-cli": "^3.0.1",
-    "mocha": "^5.2.0",
-    "mocha-multi-reporters": "1.1.7",
-    "mochawesome": "^6.1.1",
-    "mochawesome-merge": "^4.1.0",
-    "mochawesome-report-generator": "^5.1.0"
+    "cypress": "latest"
   }
 }
