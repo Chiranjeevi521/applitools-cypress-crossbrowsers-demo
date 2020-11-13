@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "citest_chrome": "npx cypress run --browser chrome --spec 'cypress/integration/appli_fashion/*.spec.js'",
-    "citest_firefox": "npx cypress run --browser firefox --spec 'cypress/integration/appli_fashion/*.spec.js'",
     "validate": "circleci config validate .circleci/config.yml",
     "process": "circleci config process .circleci/config.yml"
   },

@@ -48,15 +48,3 @@ workflows:
           command: |
             set +e
             npm run citest_chrome
-      # run tests inside Docker image with Firefox pre-installed
-      - cypress/run:
-          filters:
-            branches:
-              ignore: /^renovate/
-          name: Firefox 75
-          executor: chrome81-ff75
-          record: true
-          browser: firefox
-          command: |
-            set +e
-            npm run citest_firefox
