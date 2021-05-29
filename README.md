@@ -1,6 +1,6 @@
-# ApplitoolsHolidayShoppingHackathon2020
+# applitools-cypress-crossbrowsers-demo
 
-This repo contains tests for ApplitoolsHolidayShoppingHackathon2020 written using Cypress
+This repo contains tests for applitools-cypress-crossbrowsers-demo written using Cypress
 
 There is 1 spec file called AppliFashonTest.spec.ts which contains 3 tests
 
@@ -27,5 +27,3 @@ There is 1 spec file called AppliFashonTest.spec.ts which contains 3 tests
 # Test results on Circle CI cloud :
 
 Configured all tests to run on Chrome browser against final_prod version
-
-API tocken to see results is : 6e8872c2899ebcc4e32e41af68817766b56518b4
