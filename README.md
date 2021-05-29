@@ -12,6 +12,8 @@ There is 1 spec file called AppliFashonTest.spec.ts which contains 3 tests
 
 # How to run tests :
 
+Precondition : Add Applitools API key appliltools.cofig.js file
+
 ## To run against prod environment
 
 1. npm run prod
